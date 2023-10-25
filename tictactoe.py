@@ -38,7 +38,16 @@ def makeMove():
             validMove = False
             print("Letter out of range " + row)
 
-        col = int(x[1])
+        col = 999
+
+        #Check if digit in position 2
+        if (x[1].isdigit()):
+            print(x[1] + " is a number")
+            col = int(x[1])
+        else:
+            print("Not a number")
+            validMove = False
+
         #check number is 0-2
         if (col > 2):
             validMove = False
@@ -93,7 +102,7 @@ def checkWin():
         winLocal = True
     elif (a[2] == b[1] == c[0]) and (a[2] != ' '):
         winLocal = True
-    
+
     if(winLocal):
         if (player):
             pNum = 1
