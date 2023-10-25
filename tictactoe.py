@@ -26,9 +26,9 @@ def makeMove():
             exit()
 
         #check length
-        if (len(x) > 2):
+        if (len(x) != 2):
             validMove = False
-            print("Too long")
+            print("Bad length")
 
         #check letter is a-c
         row = x[0].lower()
@@ -41,12 +41,13 @@ def makeMove():
         col = 999
 
         #Check if digit in position 2
-        if (x[1].isdigit()):
-            print(x[1] + " is a number")
-            col = int(x[1])
-        else:
-            print("Not a number")
-            validMove = False
+        if(validMove):
+            if (x[1].isdigit()):
+                print(x[1] + " is a number")
+                col = int(x[1])
+            else:
+                print("Not a number")
+                validMove = False
 
         #check number is 0-2
         if (col > 2):
