@@ -1,17 +1,17 @@
-import funcs
+import tttfuncs
 
-funcs.printBoard()
+tttfuncs.printBoard()
 
-while(not(funcs.win)):
-    if (funcs.player):
+while(not(tttfuncs.win)):
+    if (tttfuncs.player):
         print("Player 1 (O's) make your move...")
     else:
-        print("Player 2 (X's) make your move...")
+        print("Player 2 (X's)q' make your move...")
 
-    funcs.makeMove()
-    funcs.printBoard()
-    funcs.win = funcs.checkWin()
+    tttfuncs.makeMove()
+    tttfuncs.printBoard()
+    tttfuncs.win = tttfuncs.checkWin()
 
     #change active player
-    funcs.player = not(funcs.player)
+    tttfuncs.player = not(tttfuncs.player)
     
